@@ -1,12 +1,12 @@
 import {
   ChangeEventHandler,
   FC,
-  FormEventHandler,
   HTMLInputTypeAttribute,
   useState,
 } from "react";
 import { createQuoteProps } from "../App";
 import { channelType } from "./generatedQuote";
+import "./quoteForm.css";
 
 interface InputProps {
   label?: string;
@@ -36,7 +36,7 @@ const LabelledInput: FC<LabelledInputProps> = ({
   onChange,
 }) => {
   return (
-    <label htmlFor={name}>
+    <label htmlFor={name} className="input__elem">
       {label}
       <input type={type} name={name} value={value} onChange={onChange} />
     </label>
@@ -50,7 +50,7 @@ const LabelledSelect: FC<LabelledSelectProps> = ({
   onChange,
 }) => {
   return (
-    <label htmlFor={name}>
+    <label htmlFor={name} className="select__elem">
       {label}
       <select name={name} onChange={onChange}>
         {options.map((o, index) => (
@@ -75,8 +75,9 @@ export const QuoteForm: FC<QuoteFormProps> = ({ createQuoteFn }) => {
     e.preventDefault();
     createQuoteFn(formData);
   };
+
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="form">
       <LabelledInput
         value={formData.startingCountry}
         onChange={(e) =>
@@ -116,7 +117,9 @@ export const QuoteForm: FC<QuoteFormProps> = ({ createQuoteFn }) => {
           { label: "ocean", value: "ocean" },
         ]}
       />
-      <button type="submit">Create quote</button>
+      <button className="btn" type="submit">
+        Create quote
+      </button>
     </form>
   );
 };

@@ -1,0 +1,128 @@
+.quote__container {
+  border: solid 1px black;
+  display: flex;
+  margin: 10px 20px 20px;
+}
+
+.quote__details {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.quote__branding {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  border-bottom: solid 1px black;
+}
+
+.quote__icon {
+  width: 50px;
+  height: 50px;
+}
+
+.quote__delivery-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.quote__delivery-duration {
+  color: #4129c7;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.quote__delivery-heading,
+.quote__delivery-days {
+  font-size: 15px;
+}
+
+.quote__delivery-days {
+  font-weight: bold;
+}
+
+.quote__destination-container {
+  width: 65%;
+  border-left: solid 1px black;
+}
+
+.quote__destination {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #4129c7;
+  color: white;
+}
+
+.quote__destination > h3 {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.quote__price-container {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote__price {
+  font-size: 40px;
+}
+
+@media screen and (max-width: 640px) {
+  .quote__icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .quote__price {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .quote__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .quote__details {
+    width: 100%;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .quote__branding {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    border-bottom: solid 1px black;
+  }
+
+  .quote__destination-container {
+    width: 100%;
+    border-left: none;
+  }
+
+  .quote__destination {
+    width: 100%;
+    padding: 10px;
+    justify-content: start;
+  }
+
+  .quote__price-container {
+    width: 100%;
+    padding: 20px 0;
+  }
+}

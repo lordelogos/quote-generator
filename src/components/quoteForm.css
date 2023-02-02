@@ -1,0 +1,31 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+}
+
+.input__elem,
+.select__elem {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 15px;
+  font-family: sans-serif;
+  width: max-content;
+}
+
+.select__elem {
+  margin-bottom: 0;
+}
+
+.btn {
+  margin: 10px 0;
+  width: 100px;
+  padding: 10px;
+  background: #3898ec;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
