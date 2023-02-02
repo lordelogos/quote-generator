@@ -38,7 +38,13 @@ const LabelledInput: FC<LabelledInputProps> = ({
   return (
     <label htmlFor={name} className="input__elem">
       {label}
-      <input type={type} name={name} value={value} onChange={onChange} />
+      <input
+        required
+        type={type}
+        name={name}
+        value={value}
+        onChange={onChange}
+      />
     </label>
   );
 };
@@ -67,7 +73,7 @@ export const QuoteForm: FC<QuoteFormProps> = ({ createQuoteFn }) => {
   const [formData, setFormData] = useState<createQuoteProps>({
     destinationCountry: "",
     quotePrice: 0,
-    shippingChannel: "air",
+    shippingChannel: "ocean",
     startingCountry: "",
   });
 
