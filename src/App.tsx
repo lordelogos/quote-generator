@@ -17,7 +17,7 @@ interface Quote extends createQuoteProps {
 }
 
 function App() {
-  const [quote, setQuote] = useState<Quote | undefined>(undefined);
+  const [quote, setQuote] = useState<Quote | null>(null);
   const createQuote = (data: createQuoteProps) => {
     let deliveryRangeStart, endRange;
     if (data.shippingChannel === "air") {
@@ -38,7 +38,7 @@ function App() {
   return (
     <div className="App">
       <QuoteForm createQuoteFn={createQuote} />
-      {quote && (
+      {!!quote && (
         <GeneratedQuote
           quoteType={quote.shippingChannel}
           deliveryRangeEnd={quote.deliveryRangeEnd}

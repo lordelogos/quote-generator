@@ -113,8 +113,8 @@ export const QuoteForm: FC<QuoteFormProps> = ({ createQuoteFn }) => {
         label="Shipping channel"
         name=""
         options={[
-          { value: "air", label: "air" },
-          { label: "ocean", value: "ocean" },
+          { label: "Ocean", value: "ocean" },
+          { label: "Air", value: "air" },
         ]}
       />
       <button className="btn" type="submit">
